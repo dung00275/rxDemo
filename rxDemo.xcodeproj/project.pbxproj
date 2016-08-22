@@ -18,6 +18,7 @@
 		CF512A4E1D66ABEA00C99205 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF512A4D1D66ABEA00C99205 /* Router.swift */; };
 		CF512A501D66B18900C99205 /* 9GagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF512A4F1D66B18900C99205 /* 9GagModel.swift */; };
 		CF512A551D66DEB800C99205 /* gagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF512A541D66DEB800C99205 /* gagViewModel.swift */; };
+		CF8BB18F1D6AB04400BA4AC5 /* gagDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8BB18E1D6AB04400BA4AC5 /* gagDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		CF512A4D1D66ABEA00C99205 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CF512A4F1D66B18900C99205 /* 9GagModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 9GagModel.swift; sourceTree = "<group>"; };
 		CF512A541D66DEB800C99205 /* gagViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gagViewModel.swift; sourceTree = "<group>"; };
+		CF8BB18E1D6AB04400BA4AC5 /* gagDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gagDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		CF512A291D66AAB600C99205 /* rxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CF8BB18D1D6AB01D00BA4AC5 /* dataSource */,
 				CF512A4A1D66ABC100C99205 /* api */,
 				CF512A4B1D66ABC100C99205 /* model */,
 				CF512A4C1D66ABC100C99205 /* viewmodel */,
@@ -159,6 +162,14 @@
 				CF512A541D66DEB800C99205 /* gagViewModel.swift */,
 			);
 			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		CF8BB18D1D6AB01D00BA4AC5 /* dataSource */ = {
+			isa = PBXGroup;
+			children = (
+				CF8BB18E1D6AB04400BA4AC5 /* gagDataSource.swift */,
+			);
+			path = dataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +358,7 @@
 			files = (
 				CF512A2D1D66AAB600C99205 /* ViewController.swift in Sources */,
 				CF512A4E1D66ABEA00C99205 /* Router.swift in Sources */,
+				CF8BB18F1D6AB04400BA4AC5 /* gagDataSource.swift in Sources */,
 				CF512A2B1D66AAB600C99205 /* AppDelegate.swift in Sources */,
 				CF512A551D66DEB800C99205 /* gagViewModel.swift in Sources */,
 				CF512A501D66B18900C99205 /* 9GagModel.swift in Sources */,

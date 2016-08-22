@@ -40,7 +40,34 @@ struct Media: Mappable {
     }
 }
 
-struct ItemGag: Mappable, IdentifiableType, Equatable {
+//struct ItemGag: Mappable, IdentifiableType, Equatable {
+//    var identifier: String?
+//    var caption: String?
+//    var imageItem: ImageItem?
+//    var link: NSURL?
+//    var media: Media?
+//    var numberVotes: Int?
+//    var numberComments: Int?
+//    var identity: Int {
+//        return Int(identifier ?? "0") ?? 0
+//    }
+//
+//    init?(_ map: Map) {
+//
+//    }
+//
+//    mutating func mapping(map: Map) {
+//        identifier <- map["id"]
+//        caption <- map["caption"]
+//        imageItem <- map["images"]
+//        media <- map["media"]
+//        link <- (map["link"], URLTransform())
+//        numberVotes <- map["votes.count"]
+//        numberComments <- map["comments.count"]
+//    }
+//}
+
+struct ItemGag: Mappable, Comparable {
     var identifier: String?
     var caption: String?
     var imageItem: ImageItem?
@@ -48,9 +75,6 @@ struct ItemGag: Mappable, IdentifiableType, Equatable {
     var media: Media?
     var numberVotes: Int?
     var numberComments: Int?
-    var identity: Int {
-        return Int(identifier ?? "0") ?? 0
-    }
 
     init?(_ map: Map) {
 
@@ -69,6 +93,14 @@ struct ItemGag: Mappable, IdentifiableType, Equatable {
 
 func == (left: ItemGag, right: ItemGag) -> Bool {
     return left.identifier == right.identifier
+}
+
+func >= (left: ItemGag, right: ItemGag) -> Bool {
+    return left.numberVotes >= right.numberVotes
+}
+
+func < (left: ItemGag, right: ItemGag) -> Bool {
+    return left.numberVotes < right.numberVotes
 }
 
 struct DataResponse: Mappable {
